@@ -1,6 +1,6 @@
 # Experimental results
 
-Run ID: `20260916T004514Z`. Dataset: `10.17632/f663p7c89m.1` version 1.
+Run ID: `20260916T015000Z`. Dataset: `10.17632/f663p7c89m.1` version 1.
 
 The audit found 173 CSV rows; 171 uniquely mapped width/height samples were eligible. The frozen split contains {'train': 119, 'test': 26, 'validation': 26}. Segmentation failures: 0.
 
@@ -33,7 +33,7 @@ The method selected using validation MAE before opening final-test results was *
 
 ## Computational cost
 
-Mean classical image segmentation and feature extraction time was 3.42 ms/image (292.69 images/s) on the recorded CPU environment.
+Mean classical image segmentation and feature extraction time was 4.25 ms/image (235.11 images/s) on the recorded CPU environment.
 
 ## Limitations
 

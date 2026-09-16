@@ -16,7 +16,7 @@ uniquely usable and split by physical sample into train, validation and an untou
 Otsu segmentation and contour morphology were compared with classical regressors and a frozen
 MobileNetV3-Small baseline. Validation selected hist\_gradient\_boosting. On 26 test samples it achieved
 MAE 2.10 for width and 2.40 for height, with $R^2$ 0.694 and 0.847.
-Classical processing required 3.4 ms/image on CPU. The work supplies an auditable baseline
+Classical processing required 4.3 ms/image on CPU. The work supplies an auditable baseline
 while retaining unit, calibration and external-validity limitations.
 \end{abstract}
 \textbf{Keywords:} computer vision; bread quality; non-destructive measurement; image
@@ -108,7 +108,7 @@ Height & 2.40 & 3.02 & 0.847 \\
 \end{figure}
 
 All 171 eligible images segmented successfully. Classical segmentation and feature extraction
-averaged 3.4 ms/image. The ablation, confidence intervals, per-sample predictions and
+averaged 4.3 ms/image. The ablation, confidence intervals, per-sample predictions and
 agreement limits are generated from the same run and retained in the repository.
 
 The selected model's Bland--Altman width bias was close to zero, while the observed limits of

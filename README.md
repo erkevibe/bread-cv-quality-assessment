@@ -94,7 +94,7 @@ Validation-selected method: **hist_gradient_boosting**; untouched test n=26.
 | Width | 2.103 | 3.122 | 0.694 |
 | Height | 2.400 | 3.016 | 0.847 |
 
-Classical CV processing: 3.42 ms/image. Values use the dataset's nominal unit; see the unit limitation in the report.
+Classical CV processing: 4.25 ms/image. Values use the dataset's nominal unit; see the unit limitation in the report.
 <!-- GENERATED_RESULTS_END -->
 
 See `reports/results.md` for every model, confidence intervals, agreement analysis and

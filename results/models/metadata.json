@@ -19,7 +19,7 @@
     "parameter_count": 1519906,
     "trainable_parameter_count": 592898,
     "model_bytes": 6212821,
-    "mean_cpu_inference_ms_per_image": 11.645967834408566,
+    "mean_cpu_inference_ms_per_image": 18.310244818712818,
     "history": [
       {
         "epoch": 1,

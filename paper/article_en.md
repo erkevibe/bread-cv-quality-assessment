@@ -13,7 +13,7 @@ compared with linear, ridge, random-forest, and histogram-gradient-boosting regr
 morphological features. The method selected on validation data was hist_gradient_boosting. On 26 untouched
 test samples it achieved width MAE 2.10, height MAE 2.40, width RMSE 3.12,
 height RMSE 3.02, and R² values of 0.694 and 0.847, respectively, in the
-dataset's nominal millimetre unit. Classical processing required 3.4 ms/image on CPU.
+dataset's nominal millimetre unit. Classical processing required 4.3 ms/image on CPU.
 The results establish a transparent low-cost baseline while exposing metadata, calibration, and
 external-validity limitations.
 
@@ -90,7 +90,7 @@ RMSE were 2.10 and 3.12; height MAE and RMSE were 2.40 and 3.02.
 The corresponding R² values were 0.694 for width and 0.847 for height. Full per-method
 metrics, bootstrap intervals, predictions, ablation results, paired tests, and Bland--Altman
 limits are generated from the same run in `reports/results.md` and `results/`. Classical image
-processing averaged 3.4 ms/image on the recorded CPU environment. The lightweight image
+processing averaged 4.3 ms/image on the recorded CPU environment. The lightweight image
 regression status for this run was `completed`; no missing CNN result is represented as a
 successful comparison.
 
