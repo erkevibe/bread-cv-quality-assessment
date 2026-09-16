@@ -1,17 +1,16 @@
-# FLW Council: project skills and competency matrix
+# Project skills and competency matrix
 
 Decision date: 2026-09-16.
 Voting membership fixed before the proposal: Chair, Customer, PM, Architect/Science.
 Decision: **accepted, 4/4 votes for**.
 
-Exact principle: use the minimum sufficient set of skills, activated at the FLW gate where they
+Exact principle: use the minimum sufficient set of skills, activated at the project gate where they
 reduce a demonstrated risk. Applying a skill is never evidence that a gate passed.
 
 ## Codex skills
 
 | Skill | When | Status / reason |
 |---|---|---|
-| `FLW_SKILL.md` | Entire project | **Required.** Council, risk, gates, independent review, process and debt audit. |
 | `bash-pro` | Only for substantial shell/download/checksum/CI/smoke work | Conditional; Python remains the primary implementation language. |
 | `spreadsheets:Spreadsheets` | Independent spot-check of actual `Data.csv` and result CSVs | Conditional; must not replace the reproducible pandas audit. |
 | `diagnosing-bugs` | A real hard failure, regression, or performance anomaly | Reactive, not ceremonial. |
@@ -26,7 +25,7 @@ and plugin/skill creators. A new user request may change this decision.
 
 | Gate | Mandatory competencies | Principal owner | Gate evidence |
 |---|---|---|---|
-| G0 governance | requirements traceability, research integrity, FLW risk control | Chair, Customer, PM | accepted proposal, DoD/evidence matrix |
+| G0 governance | requirements traceability, research integrity, project risk control | Chair, Customer, PM | accepted proposal, DoD/evidence matrix |
 | G1 acquisition | Mendeley provenance, DOI/version/license, safe HTTP, SHA-256, data exclusion | Science, Operations, Security | official archive provenance and fingerprint; no data in Git |
 | G2 audit/mapping | pandas profiling, image corpus forensics, entity resolution, units/views/domain reasoning | Data engineer, Science | CSV/image inventory and defensible physical `sample_id` mapping |
 | G3 split | leakage analysis, grouped holdout/GroupKFold, frozen test design | Science, ML, independent QA | zero group intersection and frozen split manifest |
