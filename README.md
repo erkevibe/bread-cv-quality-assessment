@@ -84,6 +84,19 @@ The command produces the audit, canonical manifest, frozen split, features, mode
 metrics, statistical comparisons, no more than five figures, the results report, and both paper
 drafts. It never downloads data implicitly and does not commit source images or learned weights.
 
+## Word articles
+
+The publication-ready Word versions are available as
+[`paper/article_ru.docx`](paper/article_ru.docx) and
+[`paper/article_en.docx`](paper/article_en.docx). They include the five generated figures,
+summary tables, page headers and footers, and the verified 17-item bibliography.
+
+Regenerate both documents after changing the Markdown articles, figures, or metrics:
+
+```bash
+make word
+```
+
 ## Main results
 
 <!-- GENERATED_RESULTS_START -->

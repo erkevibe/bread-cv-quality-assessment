@@ -1,0 +1,10 @@
+{
+  "name": "bread-cv-quality-assessment-documents",
+  "private": true,
+  "scripts": {
+    "article:word": "node scripts/build_article_docx.js"
+  },
+  "dependencies": {
+    "docx": "9.6.1"
+  }
+}

@@ -1,6 +1,6 @@
 PYTHON ?= .venv/bin/python
 
-.PHONY: install test lint audit experiment clean
+.PHONY: install test lint audit experiment word clean
 
 install:
 	uv sync --extra dev --extra cnn
@@ -16,6 +16,10 @@ audit:
 
 experiment:
 	$(PYTHON) scripts/run_all.py --config configs/experiment.yaml
+
+word:
+	npm install
+	npm run article:word
 
 clean:
 	$(PYTHON) scripts/clean_generated.py
