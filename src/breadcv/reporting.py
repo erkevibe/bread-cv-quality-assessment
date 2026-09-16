@@ -191,6 +191,12 @@ quantifies agreement, and reports CPU cost. The research question is whether thi
 pipeline can estimate width and height with useful accuracy and whether morphology-based learning
 reduces error relative to one-dimensional pixel calibration.
 
+![End-to-end experimental workflow](figures/pipeline.png)
+
+**Figure 1.** End-to-end workflow from the versioned dataset audit and group-safe split to
+segmentation, feature extraction, model selection, final-test evaluation, and generated research
+artifacts. The diagram emphasises that the test set is opened only after validation selection.
+
 ## 2. Materials and Methods
 
 ### 2.1 Dataset and audit
@@ -214,6 +220,13 @@ The implementation recorded failures, border contact, polarity, and processing t
 features were bounding-box width and height, contour area, perimeter, aspect ratio, circularity,
 solidity, extent, equivalent diameter, and ellipse axes/eccentricity when defined. They are
 quantitative descriptors; no unsupported good/bad shape class was created.
+
+![Bread images, masks, and retained contours](figures/segmentation_examples.png)
+
+**Figure 2.** Representative source photographs from the size subset, automatically generated
+binary masks, and the retained bread contours with axis-aligned width and height measurements.
+The examples show that crust irregularities are retained instead of being replaced by an idealised
+geometric template.
 
 ### 2.3 Splitting and models
 
@@ -244,6 +257,24 @@ limits are generated from the same run in `reports/results.md` and `results/`. C
 processing averaged {speed:.1f} ms/image on the recorded CPU environment. The lightweight image
 regression status for this run was `{cnn_status}`; no missing CNN result is represented as a
 successful comparison.
+
+![Ground truth versus model predictions](figures/predicted_vs_actual.png)
+
+**Figure 3.** Ground truth versus predictions of the validation-selected model on the untouched
+test set. The dashed identity line makes systematic compression at the extremes visible, especially
+for large widths, even when the overall coefficient of determination remains positive.
+
+![Bland--Altman measurement agreement](figures/bland_altman.png)
+
+**Figure 4.** Bland--Altman agreement analysis for width and height. The central line represents
+mean bias and the outer lines the empirical 95% limits of agreement. This view complements R² by
+showing the magnitude and spread of pairwise measurement differences.
+
+![Final-test MAE comparison](figures/model_comparison.png)
+
+**Figure 5.** Final-test MAE comparison for linear calibration, morphology-based regressors, and
+MobileNetV3-Small. The CNN result is retained as a negative comparison rather than selectively
+omitted; on this sample size the compact morphology model performs better.
 
 Differences between width and height errors can arise from irregular crust boundaries,
 orientation, and the fact that an axis-aligned bounding box responds to pose. Learned morphology
@@ -309,6 +340,12 @@ Gaussian blur, порог Отсу, морфологические операц�
 снижают ошибку относительно одномерной pixel-to-mm калибровки; её статус определяется только
 вычислительным экспериментом.
 
+![Схема полного экспериментального процесса](figures/pipeline.png)
+
+**Рисунок 1.** Полный процесс от аудита версионированного набора данных и группового разбиения до
+сегментации, извлечения признаков, выбора модели, финальной оценки и формирования материалов
+исследования. Независимая test-выборка используется только после выбора метода по validation.
+
 ## 2. Материалы и методы
 
 ### 2.1 Набор данных
@@ -328,6 +365,12 @@ closing подавляли малые объекты, затем выбирал�
 контур, bounding box, служебные флаги и время. Рассчитывались width/height в пикселях, area,
 perimeter, aspect ratio, circularity, solidity, extent, equivalent diameter, а при наличии пяти
 точек — оси эллипса и eccentricity. Искусственные классы качества формы не вводились.
+
+![Фотографии хлеба, маски и найденные контуры](figures/segmentation_examples.png)
+
+**Рисунок 2.** Примеры исходных фотографий из размерной части набора, автоматически полученных
+бинарных масок и контуров с измерениями ширины и высоты. Неровности корки сохраняются в контуре,
+а не заменяются идеализированной геометрической фигурой.
 
 ### 2.3 Эксперимент
 
@@ -350,6 +393,24 @@ height={h_r2:.3f}. Полные метрики, интервалы, Bland--Altma
 `reports/results.md` и `results/` и генерируются одним запуском. Среднее время классической
 обработки — {speed:.1f} мс/изображение. Статус lightweight CNN: `{cnn_status}`; отсутствующий
 эксперимент не подменяется положительным выводом.
+
+![Эталонные значения и прогнозы модели](figures/predicted_vs_actual.png)
+
+**Рисунок 3.** Эталонные значения и прогнозы выбранной по validation модели на независимом test.
+Пунктирная линия соответствует идеальному равенству и показывает сжатие прогнозов на крайних
+значениях, особенно для наиболее широких образцов.
+
+![Анализ согласия Bland--Altman](figures/bland_altman.png)
+
+**Рисунок 4.** Анализ согласия Bland--Altman для ширины и высоты. Центральная линия показывает
+среднее смещение, внешние линии — эмпирические 95%-е пределы согласия. Такой график дополняет R²,
+показывая величину и разброс парных ошибок измерения.
+
+![Сравнение MAE методов](figures/model_comparison.png)
+
+**Рисунок 5.** Сравнение MAE линейной калибровки, регрессоров по морфологическим признакам и
+MobileNetV3-Small на final test. Результат CNN сохранён как отрицательное сравнение: при данном
+размере выборки компактная морфологическая модель оказалась точнее.
 
 Различие ошибок по двум осям может быть связано с неправильной формой корки, поворотом и
 чувствительностью axis-aligned bounding box. Морфологическая регрессия учитывает площадь и
@@ -410,6 +471,13 @@ reviews describe extensive colour, texture and shape analysis while identifying 
 standardisation and reproducibility \cite{{olakanmi2023review,martinezlara2026review}}. We ask
 whether an auditable morphology-based pipeline improves on one-dimensional pixel calibration.
 
+\begin{{figure}}[t]
+\centering\includegraphics[width=\columnwidth]{{figures/pipeline.pdf}}
+\caption{{End-to-end auditable workflow. The final test set remains isolated until validation
+selection is complete.}}
+\label{{fig:pipeline}}
+\end{{figure}}
+
 \section{{Materials and methods}}
 The CC BY 4.0 dataset by Mora \cite{{mora2025bread_dataset}} was downloaded from its versioned
 record and kept outside Git. Its size CSV has 173 rows. A duplicated canonical image identifier
@@ -460,10 +528,12 @@ written to provenance. Test-set segmentation failure is a blocking error rather 
 dropped observation. Bootstrap intervals use the configured 2,000 resamples, and all paired
 comparisons operate on identical physical sample IDs.
 
-\begin{{figure}}[h]
-\centering\includegraphics[width=\columnwidth]{{figures/segmentation_examples.pdf}}
-\caption{{Examples of source images, binary masks and retained contours.}}
-\end{{figure}}
+\begin{{figure*}}[t]
+\centering\includegraphics[width=\textwidth]{{figures/segmentation_examples.pdf}}
+\caption{{Representative source photographs, automatically generated masks, and retained bread
+contours. Crust irregularities remain visible in the measured boundary.}}
+\label{{fig:segmentation}}
+\end{{figure*}}
 
 \section{{Results}}
 The validation-selected method was {best_tex}. Table~\ref{{tab:results}} reports final-test
@@ -483,10 +553,12 @@ Height & {h_mae:.2f} & {h_rmse:.2f} & {h_r2:.3f} \\
 \end{{tabular}}
 \end{{table}}
 
-\begin{{figure}}[h]
-\centering\includegraphics[width=\columnwidth]{{figures/predicted_vs_actual.pdf}}
-\caption{{Ground truth versus prediction for the validation-selected method.}}
-\end{{figure}}
+\begin{{figure*}}[t]
+\centering\includegraphics[width=0.92\textwidth]{{figures/predicted_vs_actual.pdf}}
+\caption{{Ground truth versus predictions for the validation-selected method on the untouched
+test set. The dashed identity line reveals regression towards the centre at extreme widths.}}
+\label{{fig:predictions}}
+\end{{figure*}}
 
 All {n} eligible images segmented successfully. Classical segmentation and feature extraction
 averaged {speed:.1f} ms/image. The ablation, confidence intervals, per-sample predictions and
@@ -498,9 +570,18 @@ The paired improvement over the linear calibration was stronger for width than h
 results support the narrower conclusion that morphology helps calibration under this controlled
 setup; they do not establish a universal bread-quality score.
 
+\begin{{figure*}}[t]
+\centering\includegraphics[width=0.92\textwidth]{{figures/bland_altman.pdf}}
+\caption{{Bland--Altman agreement analysis. The central line is mean bias and the outer lines are
+the empirical 95\% limits of agreement.}}
+\label{{fig:bland_altman}}
+\end{{figure*}}
+
 \begin{{figure}}[h]
 \centering\includegraphics[width=\columnwidth]{{figures/model_comparison.pdf}}
-\caption{{Final-test MAE across the evaluated methods.}}
+\caption{{Final-test MAE across classical calibration, morphology regressors, and the lightweight
+CNN baseline.}}
+\label{{fig:model_comparison}}
 \end{{figure}}
 
 \section{{Discussion and conclusion}}
