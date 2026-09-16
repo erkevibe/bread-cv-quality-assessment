@@ -40,6 +40,12 @@ quantifies agreement, and reports CPU cost. The research question is whether thi
 pipeline can estimate width and height with useful accuracy and whether morphology-based learning
 reduces error relative to one-dimensional pixel calibration.
 
+![End-to-end experimental workflow](figures/pipeline.png)
+
+**Figure 1.** End-to-end workflow from the versioned dataset audit and group-safe split to
+segmentation, feature extraction, model selection, final-test evaluation, and generated research
+artifacts. The diagram emphasises that the test set is opened only after validation selection.
+
 ## 2. Materials and Methods
 
 ### 2.1 Dataset and audit
@@ -63,6 +69,13 @@ The implementation recorded failures, border contact, polarity, and processing t
 features were bounding-box width and height, contour area, perimeter, aspect ratio, circularity,
 solidity, extent, equivalent diameter, and ellipse axes/eccentricity when defined. They are
 quantitative descriptors; no unsupported good/bad shape class was created.
+
+![Bread images, masks, and retained contours](figures/segmentation_examples.png)
+
+**Figure 2.** Representative source photographs from the size subset, automatically generated
+binary masks, and the retained bread contours with axis-aligned width and height measurements.
+The examples show that crust irregularities are retained instead of being replaced by an idealised
+geometric template.
 
 ### 2.3 Splitting and models
 
@@ -93,6 +106,24 @@ limits are generated from the same run in `reports/results.md` and `results/`. C
 processing averaged 4.3 ms/image on the recorded CPU environment. The lightweight image
 regression status for this run was `completed`; no missing CNN result is represented as a
 successful comparison.
+
+![Ground truth versus model predictions](figures/predicted_vs_actual.png)
+
+**Figure 3.** Ground truth versus predictions of the validation-selected model on the untouched
+test set. The dashed identity line makes systematic compression at the extremes visible, especially
+for large widths, even when the overall coefficient of determination remains positive.
+
+![Bland--Altman measurement agreement](figures/bland_altman.png)
+
+**Figure 4.** Bland--Altman agreement analysis for width and height. The central line represents
+mean bias and the outer lines the empirical 95% limits of agreement. This view complements R² by
+showing the magnitude and spread of pairwise measurement differences.
+
+![Final-test MAE comparison](figures/model_comparison.png)
+
+**Figure 5.** Final-test MAE comparison for linear calibration, morphology-based regressors, and
+MobileNetV3-Small. The CNN result is retained as a negative comparison rather than selectively
+omitted; on this sample size the compact morphology model performs better.
 
 Differences between width and height errors can arise from irregular crust boundaries,
 orientation, and the fact that an axis-aligned bounding box responds to pose. Learned morphology
