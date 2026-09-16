@@ -10,6 +10,6 @@
 | ML calibration | Compare compact models and ablation | same split/eligible rows | metrics/ablation | Passed |
 | Lightweight image model | MobileNetV3 or justified exclusion | training evidence or data gate | run log/results | Passed (25 epochs) |
 | Agreement/statistics | BA, CI, paired error comparison | programmatic recomputation | statistics/figures | Passed |
-| Reproducibility | one clean command | independent clean run | logs/manifest | Final committed run pending |
-| Article integrity | write after experiment | numbers trace to result files | RU/EN/TeX + check | QA pending |
-| Public delivery | clean public repository | independent security/repo audit | GitHub URL | Publication pending |
+| Reproducibility | one clean command | independent clean run | `FINAL_EXIT_CODE=0`, provenance | Passed |
+| Article integrity | write after experiment | numbers trace to result files | RU/EN/TeX + independent QA | Passed |
+| Public delivery | clean public repository | security/repo audit + CI | public GitHub `main`, CI run 1 | Passed |
