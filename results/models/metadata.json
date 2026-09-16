@@ -1,0 +1,153 @@
+{
+  "linear_calibration": {
+    "validation_fit": {
+      "width_coefficient": 0.10128825575251552,
+      "width_intercept": 42.383656771268654,
+      "height_coefficient": 0.18498796743710796,
+      "height_intercept": 0.545375816833797
+    },
+    "final_fit": {
+      "width_coefficient": 0.09738247898383343,
+      "width_intercept": 44.3838787481247,
+      "height_coefficient": 0.1827133643225261,
+      "height_intercept": 1.6218540670709274
+    }
+  },
+  "mobilenet_v3_small": {
+    "epochs": 25,
+    "best_validation_loss": 0.31189920008182526,
+    "parameter_count": 1519906,
+    "trainable_parameter_count": 592898,
+    "model_bytes": 6212821,
+    "mean_cpu_inference_ms_per_image": 11.645967834408566,
+    "history": [
+      {
+        "epoch": 1,
+        "train_loss": 0.7053478434681892,
+        "validation_loss": 0.5060685873031616
+      },
+      {
+        "epoch": 2,
+        "train_loss": 0.3702368102967739,
+        "validation_loss": 0.451763391494751
+      },
+      {
+        "epoch": 3,
+        "train_loss": 0.24329880438745022,
+        "validation_loss": 0.40709295868873596
+      },
+      {
+        "epoch": 4,
+        "train_loss": 0.20398993231356144,
+        "validation_loss": 0.4132661074399948
+      },
+      {
+        "epoch": 5,
+        "train_loss": 0.1587032717652619,
+        "validation_loss": 0.45133231580257416
+      },
+      {
+        "epoch": 6,
+        "train_loss": 0.18158162385225296,
+        "validation_loss": 0.5833477675914764
+      },
+      {
+        "epoch": 7,
+        "train_loss": 0.16963308304548264,
+        "validation_loss": 0.49356040358543396
+      },
+      {
+        "epoch": 8,
+        "train_loss": 0.16346134804189205,
+        "validation_loss": 0.47967448830604553
+      },
+      {
+        "epoch": 9,
+        "train_loss": 0.1798427551984787,
+        "validation_loss": 0.5284461975097656
+      },
+      {
+        "epoch": 10,
+        "train_loss": 0.17319932393729687,
+        "validation_loss": 0.46241481602191925
+      },
+      {
+        "epoch": 11,
+        "train_loss": 0.18252409156411886,
+        "validation_loss": 0.47990886867046356
+      },
+      {
+        "epoch": 12,
+        "train_loss": 0.12861356418579817,
+        "validation_loss": 0.6273016631603241
+      },
+      {
+        "epoch": 13,
+        "train_loss": 0.13877574261277914,
+        "validation_loss": 0.6702914535999298
+      },
+      {
+        "epoch": 14,
+        "train_loss": 0.1936154393479228,
+        "validation_loss": 0.5359363257884979
+      },
+      {
+        "epoch": 15,
+        "train_loss": 0.17884264513850212,
+        "validation_loss": 0.40560662746429443
+      },
+      {
+        "epoch": 16,
+        "train_loss": 0.09281799290329218,
+        "validation_loss": 0.4792284071445465
+      },
+      {
+        "epoch": 17,
+        "train_loss": 0.10409379750490189,
+        "validation_loss": 0.4310668259859085
+      },
+      {
+        "epoch": 18,
+        "train_loss": 0.08773514535278082,
+        "validation_loss": 0.33015406876802444
+      },
+      {
+        "epoch": 19,
+        "train_loss": 0.10172115825116634,
+        "validation_loss": 0.3923869729042053
+      },
+      {
+        "epoch": 20,
+        "train_loss": 0.11088420962914824,
+        "validation_loss": 0.3341692090034485
+      },
+      {
+        "epoch": 21,
+        "train_loss": 0.11682204762473702,
+        "validation_loss": 0.32178860902786255
+      },
+      {
+        "epoch": 22,
+        "train_loss": 0.11284736590459943,
+        "validation_loss": 0.3556029498577118
+      },
+      {
+        "epoch": 23,
+        "train_loss": 0.09972977032884955,
+        "validation_loss": 0.34552282094955444
+      },
+      {
+        "epoch": 24,
+        "train_loss": 0.14591829432174563,
+        "validation_loss": 0.3197879195213318
+      },
+      {
+        "epoch": 25,
+        "train_loss": 0.08579494175501168,
+        "validation_loss": 0.31189920008182526
+      }
+    ],
+    "pretrained": true,
+    "backbone_frozen": true
+  }
+}

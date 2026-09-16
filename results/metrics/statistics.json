@@ -1,0 +1,25 @@
+{
+  "best_method_selected_on_validation": "hist_gradient_boosting",
+  "width": {
+    "bland_altman": {
+      "bias": -0.03144015399749979,
+      "lower_loa": -6.272278664089668,
+      "upper_loa": 6.209398356094668
+    },
+    "wilcoxon_vs_linear_calibration": {
+      "statistic": 37.0,
+      "pvalue": 0.00016617774963378906
+    }
+  },
+  "height": {
+    "bland_altman": {
+      "bias": 0.9065147311656017,
+      "lower_loa": -4.842324493587385,
+      "upper_loa": 6.655353955918588
+    },
+    "wilcoxon_vs_linear_calibration": {
+      "statistic": 115.0,
+      "pvalue": 0.12910079956054688
+    }
+  }
+}

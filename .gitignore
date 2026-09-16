@@ -1,0 +1,28 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+build/
+dist/
+*.egg-info/
+
+# Source data and downloaded archives must never be committed.
+data/raw/
+data/extracted/
+data/*.zip
+data/*.tar*
+
+# Full row-level derivatives are generated locally and may reconstruct source measurements.
+reports/files_inventory.csv
+results/data/
+results/predictions/predictions.csv
+
+# Generated heavyweight or local-only artefacts.
+results/models/*.pt
+results/models/*.pth
+results/models/*.joblib
+results/runs/
+*.log
+.env

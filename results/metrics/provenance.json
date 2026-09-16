@@ -1,0 +1,131 @@
+{
+  "run_id": "20260916T004514Z",
+  "generated_at_utc": "2026-09-16T00:45:14.453283+00:00",
+  "dataset_doi": "10.17632/f663p7c89m.1",
+  "dataset_version": 1,
+  "csv_rows": 173,
+  "eligible_samples": 171,
+  "segmentation_failures": 0,
+  "split_counts": {
+    "train": 119,
+    "test": 26,
+    "validation": 26
+  },
+  "best_method_selected_on_validation": "hist_gradient_boosting",
+  "python": "3.12.13",
+  "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.43",
+  "processor": "",
+  "git_revision": null,
+  "mean_cv_processing_ms": 3.4166313976741107,
+  "images_per_second": 292.6859481185928,
+  "audit": {
+    "generated_at_utc": "2026-09-16T00:40:03.818927+00:00",
+    "dataset_root": "/home/superuser/projects/ATU/bread-cv-quality-assessment/data/raw/A dataset containing images of bread crumb and cru",
+    "csv_path": "/home/superuser/projects/ATU/bread-cv-quality-assessment/data/raw/A dataset containing images of bread crumb and cru/size/Data.csv",
+    "all_csv_paths": [
+      "color/Data.csv",
+      "size/Data.csv",
+      "texture/Data.csv"
+    ],
+    "csv_rows": 173,
+    "csv_columns": [
+      "image_w_h",
+      "width",
+      "heigth",
+      "image_thick",
+      "thickness"
+    ],
+    "candidate_id_columns": [],
+    "candidate_targets": {
+      "width": [
+        "width"
+      ],
+      "height": [
+        "heigth"
+      ],
+      "thickness": [
+        "thickness"
+      ]
+    },
+    "image_count": 2211,
+    "unreadable_images": 0,
+    "folders": [
+      {
+        "folder": "color",
+        "files": 1671,
+        "readable": 1671,
+        "unique_sizes": 3,
+        "channels": "3",
+        "formats": "png"
+      },
+      {
+        "folder": "size",
+        "files": 366,
+        "readable": 366,
+        "unique_sizes": 1,
+        "channels": "3",
+        "formats": "png"
+      },
+      {
+        "folder": "texture",
+        "files": 174,
+        "readable": 174,
+        "unique_sizes": 1,
+        "channels": "3",
+        "formats": "png"
+      }
+    ],
+    "csv_profiles": [
+      {
+        "folder": "color",
+        "rows": 1604,
+        "columns": "image,  L, a, b",
+        "missing_cells": 0,
+        "duplicate_rows": 0,
+        "referenced_unique_images": 1604,
+        "raw_exact_references_found": 1604,
+        "raw_exact_unreferenced_folder_images": 67,
+        "raw_exact_missing_references": 0,
+        "canonical_references_found": "n/a",
+        "canonical_missing_references": "n/a"
+      },
+      {
+        "folder": "size",
+        "rows": 173,
+        "columns": "image_w_h, width, heigth, image_thick, thickness",
+        "missing_cells": 1,
+        "duplicate_rows": 0,
+        "referenced_unique_images": 344,
+        "raw_exact_references_found": 288,
+        "raw_exact_unreferenced_folder_images": 78,
+        "raw_exact_missing_references": 56,
+        "canonical_references_found": 342,
+        "canonical_missing_references": 2
+      },
+      {
+        "folder": "texture",
+        "rows": 173,
+        "columns": "image, hardness",
+        "missing_cells": 0,
+        "duplicate_rows": 0,
+        "referenced_unique_images": 172,
+        "raw_exact_references_found": 128,
+        "raw_exact_unreferenced_folder_images": 46,
+        "raw_exact_missing_references": 44,
+        "canonical_references_found": "n/a",
+        "canonical_missing_references": "n/a"
+      }
+    ],
+    "size_mapping": {
+      "status": "verified_with_exclusions",
+      "eligible_width_height_samples": 171,
+      "excluded_rows": 2,
+      "exclusion_reasons": {
+        "ambiguous_duplicate_ground_truth": 2
+      },
+      "unique_physical_sample_ids": 171
+    }
+  },
+  "target_unit_limitation": "Data.csv does not encode units; values are treated as nominal mm.",
+  "cnn_status": "completed"
+}

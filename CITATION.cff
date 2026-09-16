@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below."
+title: "Bread CV Quality Assessment"
+type: software
+version: 0.1.0
+date-released: 2026-09-16
+authors:
+  - family-names: "AUTHOR_NAME"
+    given-names: "AUTHOR_NAME"
+    orcid: "https://orcid.org/AUTHOR_ORCID"
+    affiliation: "AFFILIATION"
+repository-code: "https://github.com/erkevibe/bread-cv-quality-assessment"
+license: MIT

@@ -1,0 +1,44 @@
+seed: 42
+
+dataset:
+  doi: "10.17632/f663p7c89m.1"
+  version: 1
+  root: "data/raw"
+  csv_name: "size/Data.csv"
+  image_folder: "size"
+
+split:
+  train: 0.70
+  validation: 0.15
+  test: 0.15
+  grouped: true
+
+image:
+  max_size: 1024
+  gaussian_kernel: 5
+  morphology_kernel: 7
+  morphology_iterations: 2
+  min_contour_area_fraction: 0.01
+  border_margin_fraction: 0.005
+
+models:
+  classical: [linear_calibration]
+  ml: [linear_regression, ridge, random_forest, hist_gradient_boosting]
+  cnn:
+    enabled: true
+    backbone: mobilenet_v3_small
+    pretrained: true
+    epochs: 25
+    batch_size: 16
+    learning_rate: 0.001
+    image_size: 224
+
+evaluation:
+  bootstrap_iterations: 2000
+  confidence: 0.95
+  cpu_warmup_images: 5
+
+outputs:
+  reports_dir: "reports"
+  results_dir: "results"
+  figures_dir: "paper/figures"
