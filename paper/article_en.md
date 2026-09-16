@@ -146,4 +146,39 @@ lightweight CNN only when effective sample size and compute support a defensible
 
 ## References
 
-Verified bibliographic metadata and DOI values are provided in `references.bib`.
+1. Mora J. *A dataset containing images of bread crumb and crust, along with measurements of size, color, and hardness*. Mendeley Data, version 1, 2025. [doi:10.17632/f663p7c89m.1](https://doi.org/10.17632/f663p7c89m.1).
+
+2. Martínez-Lara N.-D., Garzón-Castro C. L., Filomena-Ambrosio A. Analysis of physical properties in white and whole wheat sliced bread using digital image processing. *Discover Food*, 5, 261, 2025. [doi:10.1007/s44187-025-00568-3](https://doi.org/10.1007/s44187-025-00568-3).
+
+3. Dong C., Huang L., Xiong C., Li M., Tang J. Evaluation of quality of baguette bread using image analysis technique. *Journal of Food Composition and Analysis*, 140, 107222, 2025. [doi:10.1016/j.jfca.2025.107222](https://doi.org/10.1016/j.jfca.2025.107222).
+
+4. Azmat M. et al. Assessing traits in bread using image analysis and machine learning. *Food Research International*, 235, 119131, 2026. [doi:10.1016/j.foodres.2026.119131](https://doi.org/10.1016/j.foodres.2026.119131).
+
+5. Lee J., Kim Y., Kim S. The Study of an Adaptive Bread Maker Using Machine Learning. *Foods*, 12(22), 4160, 2023. [doi:10.3390/foods12224160](https://doi.org/10.3390/foods12224160).
+
+6. Gonzalez Viejo C., Harris N. M., Fuentes S. Quality Traits of Sourdough Bread Obtained by Novel Digital Technologies and Machine Learning Modelling. *Fermentation*, 8(10), 516, 2022. [doi:10.3390/fermentation8100516](https://doi.org/10.3390/fermentation8100516).
+
+7. Olakanmi S. J. et al. Quality Characterization of Fava Bean-Fortified Bread Using Hyperspectral Imaging. *Foods*, 13(2), 231, 2024. [doi:10.3390/foods13020231](https://doi.org/10.3390/foods13020231).
+
+8. Ruderman M., Howell K. A., Appels R. Digital image analysis to assess the texture of bread products. *Applied Food Research*, 5(2), 101447, 2025. [doi:10.1016/j.afres.2025.101447](https://doi.org/10.1016/j.afres.2025.101447).
+
+9. Torres J. D. et al. Non-invasive microstructural characterization and in vivo glycemic response of white bread formulated with soluble dietary fiber. *Food Bioscience*, 61, 104505, 2024. [doi:10.1016/j.fbio.2024.104505](https://doi.org/10.1016/j.fbio.2024.104505).
+
+10. Nallan Chakravartula S. S. et al. Computer vision-based smart monitoring and control system for food drying: A study on carrot slices. *Computers and Electronics in Agriculture*, 206, 107654, 2023. [doi:10.1016/j.compag.2023.107654](https://doi.org/10.1016/j.compag.2023.107654).
+
+11. Gonzalez B. et al. Automated Food Weight and Content Estimation Using Computer Vision and AI Algorithms. *Sensors*, 24(23), 7660, 2024. [doi:10.3390/s24237660](https://doi.org/10.3390/s24237660).
+
+12. Otsu N. A Threshold Selection Method from Gray-Level Histograms. *IEEE Transactions on Systems, Man, and Cybernetics*, 9(1), 62–66, 1979. [doi:10.1109/TSMC.1979.4310076](https://doi.org/10.1109/TSMC.1979.4310076).
+
+13. Bland J. M., Altman D. G. Statistical methods for assessing agreement between two methods of clinical measurement. *The Lancet*, 327(8476), 307–310, 1986. [doi:10.1016/S0140-6736(86)90837-8](https://doi.org/10.1016/S0140-6736(86)90837-8).
+
+14. Howard A. et al. Searching for MobileNetV3. *Proceedings of the IEEE/CVF International Conference on Computer Vision*, 1314–1324, 2019. [doi:10.1109/ICCV.2019.00140](https://doi.org/10.1109/ICCV.2019.00140).
+
+15. Breiman L. Random Forests. *Machine Learning*, 45, 5–32, 2001. [doi:10.1023/A:1010933404324](https://doi.org/10.1023/A:1010933404324).
+
+16. Olakanmi S. J., Jayas D. S., Paliwal J. Applications of imaging systems for the assessment of quality characteristics of bread and other baked goods: A review. *Comprehensive Reviews in Food Science and Food Safety*, 22(3), 1817–1838, 2023. [doi:10.1111/1541-4337.13131](https://doi.org/10.1111/1541-4337.13131).
+
+17. Martínez-Lara N.-D., Filomena-Ambrosio A., Garzón-Castro C. L. Use of computer vision systems in baked products: potential tool for measuring physical properties. *Journal of Food Measurement and Characterization*, 20, 6925–6947, 2026. [doi:10.1007/s11694-026-04154-8](https://doi.org/10.1007/s11694-026-04154-8).
+
+The same verified records are also available in machine-readable BibTeX form in
+`references.bib`.

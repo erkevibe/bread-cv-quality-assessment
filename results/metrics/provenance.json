@@ -17,8 +17,8 @@
   "processor": "",
   "machine": "x86_64",
   "cpu_count": 8,
-  "git_revision": "de6badd344adc959cefef904e2fe69fc5c972f55",
-  "source_tree_sha256": "f79315064d353cd20d2f75b2f697039fa014479c36d84c285168e3a5fbb7230d",
+  "git_revision": "5e25db1f4141ad05943dad47e3861429d69f0d91",
+  "source_tree_sha256": "2a7b6a79437015780714230b24f4e10f7bca980821ef2d06ec5c4f9ecd962141",
   "package_versions": {
     "numpy": "2.5.3",
     "pandas": "2.3.3",
@@ -140,5 +140,5 @@
   },
   "target_unit_limitation": "Data.csv does not encode units; values are treated as nominal mm.",
   "cnn_status": "completed",
-  "post_run_change": "Reporting-only expansion with existing experimental photographs and plots; numerical experiment code and results unchanged."
+  "post_run_change": "Reporting-only expansion with experimental figures and the complete verified bibliography; numerical experiment code and results unchanged."
 }
