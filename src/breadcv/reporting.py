@@ -332,10 +332,11 @@ perimeter, aspect ratio, circularity, solidity, extent, equivalent diameter, а 
 ### 2.3 Эксперимент
 
 Физические sample ID разделены на train/validation/test в долях 70/15/15 при seed=42; пересечение
-групп программно запрещено. Отдельные линейные калибровки ширины и высоты обучались только на
-train. Для Method B сравнивались Linear Regression, Ridge, Random Forest [15] и
+групп программно запрещено. Validation-кандидаты обучались только на train. После выбора метода
+классические модели переобучались на train+validation перед однократной оценкой final test. Для
+Method B сравнивались Linear Regression, Ridge, Random Forest [15] и
 HistGradientBoostingRegressor. Ablation сопоставлял два пиксельных признака и полный набор
-морфологии. Метод выбирался по validation MAE, после чего один раз оценивался final test.
+морфологии.
 
 Для width и height вычислялись MAE, RMSE и R², bootstrap-интервалы MAE и парный Wilcoxon по общей
 выборке. Согласие лучшего метода анализировалось по Bland--Altman [13], поскольку высокий R² сам
